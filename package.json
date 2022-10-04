@@ -1,7 +1,7 @@
 {
-  "name": "jeffzwang/gsn",
+  "name": "jeffzwanggsn",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "workspaces": {
     "packages": [
       "packages/*"
