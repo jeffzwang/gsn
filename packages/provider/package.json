@@ -1,6 +1,6 @@
 {
-  "name": "@opengsn/provider",
-  "version": "3.0.0-beta.2",
+  "name": "jeffzwangprovider",
+  "version": "1.0.1",
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "scripts": {
