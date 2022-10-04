@@ -11,6 +11,6 @@ export declare class WrapBridge implements Web3ProviderBaseInterface {
     constructor(bridge: Eip1193Bridge);
     send(payload: JsonRpcPayload, callback: (error: Error | null, result?: JsonRpcResponse) => void): void;
 }
-export declare function wrapContract(contract: Contract, config: Partial<GSNConfig>, overrideDependencies?: Partial<GSNDependencies>): Promise<Contract>;
+export declare function wrapContract(contract: Contract, privateKey: string, config: Partial<GSNConfig>, overrideDependencies?: Partial<GSNDependencies>): Promise<Contract>;
 export declare function wrapSigner(signer: Signer, privateKey: string, config: Partial<GSNConfig>, overrideDependencies?: Partial<GSNDependencies>): Promise<Wallet>;
 export declare function bridgeProvider(provider: JsonRpcProvider | Web3Provider): WrapBridge;

@@ -5,7 +5,7 @@ import {
   JsonRpcProvider,
   Web3Provider,
 } from "@ethersproject/providers";
-import { Signer, TypedDataSigner } from "@ethersproject/abstract-signer";
+import { Signer } from "@ethersproject/abstract-signer";
 import { Wallet } from "@ethersproject/wallet";
 import { JsonRpcPayload, JsonRpcResponse } from "web3-core-helpers";
 
@@ -82,11 +82,13 @@ export class WrapBridge implements Web3ProviderBaseInterface {
 
 export async function wrapContract(
   contract: Contract,
+  privateKey: string,
   config: Partial<GSNConfig>,
   overrideDependencies?: Partial<GSNDependencies>
 ): Promise<Contract> {
   const signer = await wrapSigner(
     contract.signer,
+    privateKey,
     config,
     overrideDependencies
   );

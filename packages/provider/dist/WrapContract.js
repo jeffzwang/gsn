@@ -69,8 +69,8 @@ class WrapBridge {
     }
 }
 exports.WrapBridge = WrapBridge;
-async function wrapContract(contract, config, overrideDependencies) {
-    const signer = await wrapSigner(contract.signer, config, overrideDependencies);
+async function wrapContract(contract, privateKey, config, overrideDependencies) {
+    const signer = await wrapSigner(contract.signer, privateKey, config, overrideDependencies);
     return contract.connect(signer);
 }
 exports.wrapContract = wrapContract;
